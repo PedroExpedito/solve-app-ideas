@@ -1,43 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="line">
-      <input id="display" type="text">
-    </div>
-    <div class="line">
-      <button id="op_porce">%</button>
-      <button id="op_sq">√</button>
-      <button id="op_div">÷</button>
-      <button id="op_clear">C</button>
-    </div>
-    <div class="line">
-      <button id="nu_7">7</button>
-      <button id="nu_8">8</button>
-      <button id="nu_9">9</button>
-      <button id="op_multi">x</button>
-    </div>
-    <div class="line">
-      <button id="nu_4">4</button>
-      <button id="nu_5">5</button>
-      <button id="nu_6">6</button>
-      <button>-</button>
-    </div>
-    <div class="line">
-      <button id="nu_1">1</button>
-      <button id="nu_2">2</button>
-      <button id="nu_3">3</button>
-      <button id="op_sum">+</button>
-    </div>
-    <div class="line">
-      <button id="nu_0">0</button>
-      <button id="dot">.</button>
-      <button id="op_equivalent">=</button>
-    </div>
-  </body>
-  <script src="script.js"></script>
+<html>
+    <head>
+        <meta charset='utf-8' lang='pt-br'>
+        <title>Calculator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script src='script.js'></script>
+        <div class='main'>
+            <form name='form'>
+                <input id="textbox" type="text" name='textbox'>
+            </form>
+            <table>
+                <tr class='numbers'>
+                    <td><input type='button' value='C' class='buttons' onclick='clean()'></td>
+                    <td><input type='button' value='<' class='buttons' onclick='back()'></td>
+                    <td><input type='button' value='-' class='buttons' onclick='insert("-")'></td>
+                    <td><input type='button' value='+' class='buttons' onclick='insert("+")'></td>
+
+                </tr>
+                <tr class='numbers'>
+                    <td><input type="button" value='1' class='buttons' onclick="insert(1)"></td>
+                    <td><input type='button' value='2' class='buttons' onclick="insert(2)"></td>
+                    <td><input type='button' value='3' class='buttons' onclick="insert(3)"></td>
+                    <td><input type='button' value='/' class='buttons' onclick='insert("/")'></td>
+                </tr>
+                <tr class='numbers'>
+                    <td><input type='button' value='4' class='buttons' onclick='insert(4)'></td>
+                    <td><input type='button' value='5' class='buttons' onclick='insert(5)'></td>
+                    <td><input type='button' value='6' class='buttons' onclick='insert(6)'></td>
+                    <td><input type='button' value='*' class='buttons' onclick='insert("*")'></td>
+                </tr>
+                <tr class='numbers'>
+                    <td><input type='button' value='7' class='buttons' onclick='insert(7)'></td>
+                    <td><input type='button' value='8' class='buttons' onclick='insert(8)'></td>
+                    <td><input type='button' value='9' class='buttons' onclick='insert(9)'></td>
+                    <td><input type='button' value='=' class='buttons' onclick='total()'></td>
+                </tr>
+                <tr class='numbers'>
+                    <td><input type='button' value='.' class='buttons' onclick='insert(".")'></td>
+                    <td><input type='button' value='0' class='buttons' onclick='insert(0)'></td>
+                </tr>
+            </table>
+        </div>
+    </body>
 </html>
