@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <meta charset="UTF-8">
+  <title></title>
+  <style>
+    body {
+      background: #000
+    }
+    .bulb {
+      width: 20px;
+      height: 20px;
+      background: blue;
+      display: inline-block;
+      margin: 0px 10px;
+      border-radius: 100px 4px;
+      transform: rotate(-45deg);
+    }
+    .bulb:nth-child(odd) {
+      background: #6CB6FF
+      opacity: 1;
+      box-shadow: 1px 1px 15px #6cb5fF, -1px 1px 15px #6cb6ff;
+      animation: bulb-pulse-1 0.8s linear 0s infinite alternate;
+    }
+    .bulb:nth-child(even) {
+      background: #0c0;
+      opacity: 0.3;
+      box-shadow: none;
+      animation: bulb-pulse-2 0.8s linear 0s infinite alternate;
+    }
+    @keyframes bulb-pulse-1 {
+      from {
+        box-shadow: 1px 1px 15px #6cb5fF, -1px 1px 15px #6cb6ff;
+        opacity: 1;
+      } to {
+        box-shadow: none, opacity: 0.3;
+      }
+
+    }
+    @keyframes bulb-pulse-2 {
+      from {
+        box-shadow: 1px 1px 15px #6cb5fF, -1px 1px 15px #6cb6ff;
+        opacity: 1;
+      } to {
+        box-shadow: none, opacity: 0.3;
+      }
+
+    }
+  </style>
+</head>
+<body>
+  <div id="lights">
+  </div>
+  <script>
+    for ( let i  =0; i < 10; i++) {
+      let bulb = document.createElement("div");
+      bulb.className = "bulb";
+      document.getElementById("lights").appendChild(bulb);
+    }
+  </script>
+</body>
+</html>
