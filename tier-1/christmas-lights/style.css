@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 3vw;
+}
+
+.controls button, input {
+  width: 20vw;
+  height: 10vw;
+  margin-top: 2vw;
+  font-size: 5vw;
+}
+
+
+.container div {
+  margin-top: 1vw;
+}
+
+html, body {
+  background: #000;
+}
+
+.bulb {
+  width: 5vw;
+  height: 5vw;
+  background: blue;
+  display: inline-block;
+  margin: 0px 10px;
+  border-radius: 100px 4px;
+  transform: rotate(-45deg);
+}
+
+.bulb:nth-child(odd) {
+  background: #6CB6FF;
+  opacity: 0.2;
+  box-shadow: none;
+  animation: bulb-pulse-1 0.8s linear 0s infinite alternate;
+}
+
+.bulb:nth-child(even) {
+  background: #0c0;
+  opacity: 0.2;
+  box-shadow: none;
+  animation: bulb-pulse-2 0.8s linear 0s infinite alternate;
+}
+
+@keyframes bulb-pulse-1 {
+  from {
+    box-shadow: 1px 1px 15px #6cb5fF, -1px 1px 15px #6cb6ff;
+    opacity: 1;
+  } to {
+    box-shadow: none; opacity: 0.3;
+  }
+}
+
+@keyframes bulb-pulse-2 {
+  from {
+    box-shadow: 1px 1px 15px #0c0, -1px 1px 15px #0c0;
+    opacity: 1;
+  } to {
+    box-shadow: none; opacity: 0.3;
+  }
+}
