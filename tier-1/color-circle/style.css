@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.startColor {
+  width: 2vw;
+  height: 1vw;
+}
+
+#increment {
+  width: 8vw;
+  height: 1vw;
+}
